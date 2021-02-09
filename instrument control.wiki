@@ -1,0 +1,37 @@
+= Instrument Control =
+Instrument control is standardized into: VISA, SCPI, and IVI.
+
+## VISA
+VISA is a means of connecting to instruments and sending and receiving from
+many interfaces (GPIB/Ethernet/Serial/USB/PXI).
+
+
+This provides a series of mechanisms from basic read/write through events
+and triggering (software and hardware).
+
+
+VISA does not dictate command or response format. It is provided by
+National Instruments and Keysight, and perhaps others.
+
+## SCPI
+SCPI is a common format to describe instrument commands. The format
+is widely used, although there is no guarentee that the commands will
+be identical between instruments.
+
+SCPI is a simple text format.
+
+
+SCPI commands can be sent over a VISA connection.
+
+## IVI
+The IVI specification provides an API to instruments instead of text commands.
+This requires a Shared Components installation from the IVI foundation,
+and then drivers per instrument. The shared components pass information to the
+drivers, which use their own formats to carry out commands.
+
+
+This seems like a more controlled, proprietary system.
+
+IVI provides a C and a COM API, and individual instruments may provide one,
+both, or neither. 
+
