@@ -1,5 +1,8 @@
 = Instrument Control =
-Instrument control is standardized into: VISA, SCPI, and IVI.
+Instrument control is standardized into:
+    * VISA
+    * SCPI
+    * IVI
 
 ## VISA
 VISA is a means of connecting to instruments and sending and receiving from
@@ -22,6 +25,10 @@ SCPI is a simple text format.
 
 
 SCPI commands can be sent over a VISA connection.
+
+viWrite does not require a viRead for commands that set state.
+there is probably a status register that could be checked instead.
+
 
 ## IVI
 The IVI specification provides an API to instruments instead of text commands.

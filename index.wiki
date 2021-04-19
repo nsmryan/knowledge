@@ -1,3 +1,4 @@
-= My Own Little Notes =
+= Knowledge =
     * [[tcl]]
     * [[instrument control]]
+    * [[media]]
