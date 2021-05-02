@@ -1,3 +1,6 @@
-= My Own Little Notes =
+# Knowledge
+    * [[projects]]
     * [[tcl]]
     * [[instrument control]]
+    * [[ProblemsSolutions]]
+    * [[Comics]]

@@ -1,0 +1,43 @@
+# Projects
+
+    * [[Programming]]
+    * [[Articles]]
+    * [[Books]]
+
+## Current
+
+### Ludum Dare
+try to review some games
+
+### C trait example and post
+    * finish memory allocation
+    * write readme
+    * write up blog post
+
+### Rust Roguelike
+Unity integration:
+    * spawn full tile walls
+    * spawn intertile walls
+    * Ensure movement works
+    * Get facing to work
+    * Refactor AI as messaging
+
+
+
+## Blog
+Finish article on traits in C- need to finish memory allocator
+example and then write up readme and article.
+
+
+Cool things you can do with gcc article- just list these out a bit.
+maybe also cool things with c- LD_PRELOAD, instrumentation in gcc,
+valgrind for cache use, cil
+
+Series linking to ideas to get interesting ideas a small
+signal boost.
+
+Finish writeup of the 'work' library.
+
+Forth library writes ups- looking at each of pforth, libforth, atlast
+for similarities, differences, implementation details and use.
+

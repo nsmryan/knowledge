@@ -1,4 +1,4 @@
-= Instrument Control =
+# Instrument Control
 Instrument control is standardized into: VISA, SCPI, and IVI.
 
 ## VISA

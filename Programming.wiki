@@ -1,0 +1,74 @@
+# Programming
+
+## Forth
+Put assembly forth on github
+
+## Embedded
+
+### Arduino 328p Processor
+
+#### Learning Assembly
+pared down compilation for assembly projects
+    perhaps by starting with IDE process
+
+direct assembly or Amforth projects
+
+### Amforth
+Repeatable amforth installation.
+
+### STM32
+Zig on STM32, perhaps with freertos
+
+#### ProtoFlight
+Continue protoflight implementation and testing.
+run on windows, linux and freertos/stm32, and perhaps arduino
+cosmos ground system
+
+would want to flesh out initial modules to send hs, receive
+commands, and monitor tasks.
+
+
+## Zig
+
+### GA/RGEP
+Try GA and/or RGEP in Zig as a test. See if Zig is good for this
+kind of thing.
+
+Perhaps simple version, perhaps with extended features like in
+that paper that cited my thesis.
+
+Consider using Zig to create something generic.
+
+### Games
+SDL2 with Zig for creative coding/programming games.
+Ideally get cairo working and try out drawing curves, font, etc
+
+Text manipulation, distance fields, other effects with Zig.
+
+### Zig Flight Software
+What would the flight software architecture look like in Zig?
+
+
+## Elf and DWARF
+Learning ELF and DWARF. Perhaps a program to read file format,
+or reorganize function sections (-ffunction-sections).
+
+https://refspecs.linuxfoundation.org/elf/elf.pdf
+https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/
+https://www.gabriel.urdhr.fr/2015/01/22/elf-linking/
+
+Reflection with DWARF would also be cool.
+
+## Rust Roguelike
+Unity integration
+
+AI refactoring
+
+Smaller, more modular core
+
+More testing
+
+More visualizations
+
+WFC implementation - simplest possible version, 2d only, like the C project
+
