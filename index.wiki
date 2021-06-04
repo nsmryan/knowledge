@@ -2,3 +2,6 @@
     * [[tcl]]
     * [[instrument control]]
     * [[media]]
+    * [[projects]]
+    * [[ProblemsSolutions]]
+    * [[Comics]]

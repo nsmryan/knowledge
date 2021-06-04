@@ -1,0 +1,26 @@
+# Projects
+
+    * [[Programming]]
+    * [[Articles]]
+    * [[Books]]
+
+## Current
+
+### Rust Roguelike
+Unity integration:
+    * Ensure movement works
+    * Get facing to work
+    * Refactor AI as messaging
+    * Testing
+
+## Blog
+Cool things you can do with gcc article- just list these out a bit.
+maybe also cool things with c- LD_PRELOAD, instrumentation in gcc,
+valgrind for cache use, cil
+
+Series linking to ideas to get interesting ideas a small
+signal boost.
+
+Forth library writes ups- looking at each of pforth, libforth, atlast
+for similarities, differences, implementation details and use.
+

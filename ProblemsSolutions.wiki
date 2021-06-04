@@ -1,0 +1,64 @@
+# Problems and Solutions
+
+## Language Agnostic Binary Messaging:
+msgpack
+
+## Simple CLI Interface
+linenoise
+
+## In-memory Data Storage
+rax
+skiparray
+iowow
+libart
+
+## Fast C Compiler
+tcc/libtcc
+
+## Performance Testing
+hyperfine/perf/b63
+
+## Directory Monitoring
+entr
+dmon
+
+## Stretchy Buffers
+growable buffer/stretchy buffer
+
+## C11 Portable Threading
+tinycthread
+
+## Peripheries
+c-periphery
+
+## Configuration Files
+ini
+
+## Logging
+log.c
+
+## Testing
+unity
+
+## Command Line Arguments
+optfetch
+
+## Memory Streams
+SDL2
+fmem memory streams in C
+
+## Web Server
+swill web server
+
+## File System
+fs.c/tinydir
+
+## Dynamic Library Loading
+libdylib
+
+## Build Systems
+make
+ninja
+
+## Makefile Dependencies
+https://glouw.com/2018/04/14/Good-Makefiles.html
