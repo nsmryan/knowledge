@@ -4,3 +4,5 @@
     * [[instrument control]]
     * [[ProblemsSolutions]]
     * [[Comics]]
+    * [[Games]]
+

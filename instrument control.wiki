@@ -13,6 +13,8 @@ and triggering (software and hardware).
 VISA does not dictate command or response format. It is provided by
 National Instruments and Keysight, and perhaps others.
 
+The tclvisa library provides a wrapping of VISA that is very nice.
+
 ## SCPI
 SCPI is a common format to describe instrument commands. The format
 is widely used, although there is no guarentee that the commands will
@@ -20,8 +22,20 @@ be identical between instruments.
 
 SCPI is a simple text format.
 
-
 SCPI commands can be sent over a VISA connection.
+
+
+*OPC?
+Operation complete. This can be sent after configuration settings to
+wait for the settings to completely apply.
+
+:system:error? 
+Check for the most recent error.
+
+*RTS
+reset system error. This can be done before an operation like clearing
+errno.
+
 
 ## IVI
 The IVI specification provides an API to instruments instead of text commands.
