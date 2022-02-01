@@ -1,0 +1,93 @@
+= Linkers and Loaders =
+
+== Current Location ==
+https://home.cs.colorado.edu/~main/cs1300/doc/gnu/ld_3.html#SEC36
+
+== Syntax ==
+
+To group sections with a given name from all files:
+```
+  .text : { *(.text) }
+```
+
+'.' is the current location.
+
+=== Directives ===
+
+INCLUDE(file, ...) will include linker scripts.
+
+INPUT(file, ...) will include the object files in the build.
+
+GROUP(file, ...) will include the archive files in the build.
+
+OUTPUT(file) sets the default output file name.
+
+SEARCH_DIR(dir) adds a directory to the search path.
+
+STARTUP(file) links the given file first.
+
+TARGET(bfdformat) names the input file format.
+
+ASSERT(expr, message) asserts expr and prints message if 0.
+
+EXTERN(symbol ...) adds symbols to the object file as undefined.
+
+OUTPUT_ARCH(bfdformat) set the output architecture.
+
+PROVIDE(symbol = expression) adds a symbol only if it is referenced and not provided by an object file.
+
+SECTIONS describes the mapping from input to output section. These can be:
+ENTRY commands to set the entry point.
+Symbol assignments.
+Output section descriptions.
+Overlays.
+If no SECTIONS is given, the first object file will determine the order of sections, and all
+sections in all files will be grouped by name in that order starting at 0.
+
+=== Assignment ===
+
+All the C assignments work in linker scripts.
+This includes +=, -=, >>=, &=, etc.
+
+=== Entry Points ===
+
+The entry point location is determined by attempting the following in order:
+
+  * -e command line option
+  * ENTRY(symbol) in the linker script
+  * The value of the symbol 'start' if defined.
+  * The address of the first by of '.text' if defined.
+  * The location 0.
+
+== BFD ==
+
+BFD is a collection of implementations of a standard API for object file formats.
+
+These are used to fill out function pointers which convert object file data into a canonical format.
+
+There is potential for loss of information due to the abstraction.
+
+'objdump -i' tells you the supported formats.
+
+Each backend is responsible for keeping object file format, even if it does not fit in the
+canonical representation. If the file is written back in the same format, this hidden information
+can be used to fill out missing data. The information loss is usually then when different file formats are
+used.
+
+Symbols are stored with a way to get back to the object file section where they were defined, allowing
+access to the object file's information. Some type information can be encoded in some formats, and sometimes
+as a single integer covereing basic types.
+
+
+Relocation levels contain the location to relocate, its section, the symbol to relocate to, and a pointer to
+a relocation type description. Relocations can be used for specific file formats even if they are not supported
+by both input and output format.
+
+Line numbers are stored with symbols as a pointer to a list of line number records. The first record in the list
+also points back to the symbol to look up symbols by line number.
+This information can be used in some file formats.
+
+== Resources ==
+
+https://home.cs.colorado.edu/~main/cs1300/doc/gnu/ld_toc.html
+

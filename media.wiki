@@ -1,5 +1,6 @@
 = Current Media in Progress =
 
-Flight Software Workshop 2021
+Andrew Kelley's Zig live reloading Twitch streams.
 
-4ther gameboy game on twitch
+Jonathan Blow's file format streams.
+
