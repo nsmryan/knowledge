@@ -1,4 +1,5 @@
 = Knowledge =
+    * [[Vim]]
     * [[tcl]]
     * [[instrument control]]
     * [[media]]
