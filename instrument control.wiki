@@ -1,5 +1,8 @@
-# Instrument Control
-Instrument control is standardized into: VISA, SCPI, and IVI.
+= Instrument Control =
+Instrument control is standardized into:
+    * VISA
+    * SCPI
+    * IVI
 
 ## VISA
 VISA is a means of connecting to instruments and sending and receiving from
@@ -24,7 +27,6 @@ SCPI is a simple text format.
 
 SCPI commands can be sent over a VISA connection.
 
-
 *OPC?
 Operation complete. This can be sent after configuration settings to
 wait for the settings to completely apply.
@@ -35,6 +37,9 @@ Check for the most recent error.
 *RTS
 reset system error. This can be done before an operation like clearing
 errno.
+
+viWrite does not require a viRead for commands that set state.
+there is probably a status register that could be checked instead.
 
 
 ## IVI

@@ -1,0 +1,18 @@
+= Git =
+
+== Submodules ==
+
+
+git submodule init
+
+git submodule add PATH
+
+git submodule update
+
+can also do:
+git submodule update --init -recursive
+
+
+Removing submodules:
+https://gist.github.com/myusuf3/7f645819ded92bda6677
+

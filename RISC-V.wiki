@@ -1,0 +1,147 @@
+# RISC-V
+
+
+## Basic instruction set manual notes
+
+
+### Harts
+
+Harts are hardware threads. They have their own instruction fetch,
+but may be virtual or mapped to actual hardware.
+A hart must make progress either by finishing instructions,
+processing traps, or with an implemented defined
+concept of progress.
+
+
+### Encoding
+
+Instructions may vary in length. There is a version of risc-v with
+fixed 32-bit instructions, along with versions for compressed instructions
+and extended instructions.
+
+Instructions are encoded in 16 bit half-words, which must be stored
+little endian. However, the bytes in these half-words can be stored big
+endian, little endian, and may change endianness during execution.
+
+
+The lowest bits indicate length- 11 is 32 bit, other values can be used
+to indicate custom extensions or to indicate other instruction lengths.
+
+All 0s over a 16 bit halfword of an instruction is invalid, trapping a common
+issue of jumping into unused memory.
+
+All 1s is also invalid, but more limited as it is only invalid for the full instruction
+length, not within any single 16 bit half-word.
+
+What is meant by trap precision? Some traps are precise and some are not- but what does
+it mean?
+
+Situations that are not covered by the standard are labled UNSPECIFIED, and may be
+given more information in implementation documentation.
+
+
+### Integer ISA
+
+The Integer ISA can almost emulate all other standard ISAs, with the exception
+of A as this requires hardware support.
+
+32 registers, with register 0 hardcoded to 0.
+
+No explicit stack or return address. Only the Program Counter has its own
+named register.
+
+Conventionally:
+X1 as the return address.
+X2 as the stack pointer.
+X5 alternate link register.
+
+Compressed instruction are designed for X1 and X2 to be used this way.
+
+Source and destination registers are in the same position in all formats.
+
+NOP is ADDI x0, x0, 0
+Other NOPs are available, but this is the canonical one
+
+2.5 states that control transfer instructions do not have architectually
+visible delay slots. What does this mean?
+
+
+Jump and Link (JAL). Signed offset in two byte multiples. Signed extended
+and added to the address of the JAL instruction to get the next PC.
+JAL places the next location in a given register, allowing the return
+address to be stored.
+I assume this allows leaf routines to jump to X1, and other routines to
+push X1 on the stack before overwriting it with another JAL.
+JAL has a +- 1 MB range, as it is 20 bits, halves by being signed, but 
+then multipled by 2. This final multiple of 2 seems to prevent misaligned
+addresses in 16 bit half-words, although I'm not sure it can't still result
+in misaligned 32 bit address that still cause a trap.
+
+Alternate link register X5 used in 'millicode' (what is that?) routines.
+The example is to save/restore registers in compressed code. It sounds like
+a routinue that is small and intended for specific functions, kind of like
+next in forth, and is not treated as a normal function. Instead a separate
+register is used to avoid having to push X1. X5 is also apparently a
+temporary register conventionally.
+Apparently millicode is above microcode, but still part of the processor?
+
+Jump and Link Register (JALR) adds in the contents of a registers, and can
+write the next instruction's address after the JALR to a register (X1 conventionally).
+Note that JALR does not multiple the immediate by 2, but instead clears the low
+bit of the result, still ensuring 16 bit alignment. The multiple by 2 is not
+needed as it can be combined with other instructions to get 32 bits of address range.
+
+Clearing the LSB leaves this bit available to encode information without having to
+clear it with an AND first, which is neat. It is only one bit, but still...
+
+The manual also mentions a JALR with register x0, jumping to the first 2KB or last
+2KB, perhaps for a small runtime library of functions. Also neat. They mention that
+you could dedicate a general purpose register for this as well, as an offset
+into a library of functions.
+
+4 byte alignment is still required for 32-bit instruction set.
+
+Under table 2.1 there is a strange mention of coroutines, perhaps something
+about switching around between functions using multiple return address registers
+and the return stack?
+
+
+Conditional branches also multiple by 2.
+
+Conditional branches implement eq, not eq, lt, and bte, but not lte for example,
+assuming the users will just swap operands.
+
+Signed and unsigned branches are implemented.
+
+Bounds checking done with unsigned conditional branch, as negative numbers will be
+larger then a non-negative bound. This seems true only for arrays < 2 GB?
+
+There is an interesting note that software should make the sequential path the fastest,
+backwards branches assume predict taken (likely assuming they are loops), and forwards
+not taken (likely assuming that they are error handling), at least the first time
+they are seen.
+
+There is a note that you should use jumps rather then branches when possible
+for their range, and the fact that they do not pollute branch predictions.
+
+Its interesting that these branch operations do not use condition registers, which
+are in most ISAs I've read about.
+
+Loads and stores are to a register given address with offsets. They can be byte/half word/
+word size and signed extended or unsigned.
+
+Natural alignment can never cause an exception. Other accesses may depending on the environment.
+
+If all addresses are allowed, this can be implemented in hardware, or can be a trap that
+does some implemention dependent thing to make it seem like the load/store occured
+to a misaligned address.
+
+There is a good note about how aligned loads/stores can be atomic while misaligned may not,
+in case they unpack until multiple instructions.
+
+
+### Left Off At
+
+riscv-spec-20191213.pdf
+2.7 Memory Order Instructions
+

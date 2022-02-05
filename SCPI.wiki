@@ -1,0 +1,55 @@
+= SCPI =
+
+# Oscilloscope
+ 
+## Display
+
+display a channel
+:channelN:display (on|off)
+
+vertical offset of channel
+:channelN:offset
+
+vertical range of channel
+:channelN:range
+
+vertical scale of a channel, in volts
+depends on probe ratio
+:channelN:SCALE
+
+amplitude display unit
+:channelN:(volt|watt|ampere|unknown)
+
+
+### Image
+get an image from the display
+this is either bmp24, bmp8, png, jpeg, or tiff
+
+this is in TMC blockheader format
+#NXXXXXX
+where N is the number of digits and XXXXX is the size
+in bytes following this
+
+This can be large, so might want to read # and N,
+and then read the size, and then read bytes,
+when reading this kind of data
+
+### Waveform
+waveform format is byte, word or ascii.
+word is just 16 bits with all 0 in low byte
+
+
+waveform:data? retrieves data
+waveform:preamble?
+<format>: 0 ( BYTE), 1   ( WORD) or 2 ( ASC).
+<type>:  0 ( NORMal),  1 ( MAXimum) or 2 ( RAW).
+<points>: an integer between 1 and 12000000.
+After the memory depth option is installed, <points> is an integer between 1 and 24000000.
+<count>: the number of averages in the average sample mode and 1 in other modes.
+<xincrement>: the time difference between two neighboring points in the X direction.
+<xorigin>: the start time of the waveform data in the X direction.
+<xreference>: the reference time of the data point in the X direction.
+<yincrement>: the waveform increment in the Y direction.
+<yorigin>: the vertical offset relative to the "Vertical Reference Position" in the Y direction.
+<yreference>: the vertical reference position in the Y direction.
+

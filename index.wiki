@@ -1,9 +1,13 @@
-# Knowledge
-    * [[projects]]
+= Knowledge =
+    * [[Vim]]
     * [[tcl]]
     * [[instrument control]]
+    * [[media]]
+    * [[projects]]
     * [[ProblemsSolutions]]
     * [[Comics]]
     * [[Games]]
-    * Arduino
-
+    * [[Arduino]]
+    * [[RISC-V]]
+    * [[Linkers and Loaders]]
+    * [[Git]]
