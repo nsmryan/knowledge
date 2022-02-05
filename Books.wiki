@@ -1,11 +1,6 @@
 # Books
 
-Charles Moore
-Programming in a Problem Oriented Language
-
 Evidence Based Software Engineering
-
-Cuckoos Egg
 
 Electronics
 https://ultimateelectronicsbook.com/#algebraic-approximations

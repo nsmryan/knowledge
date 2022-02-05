@@ -4,3 +4,9 @@ Andrew Kelley's Zig live reloading Twitch streams.
 
 Jonathan Blow's file format streams.
 
+Graphical Linear Algebra
+https://graphicallinearalgebra.net/2015/05/19/paths-and-matrices-part-1/
+
+Electronics
+https://ultimateelectronicsbook.com/#algebraic-approximations
+

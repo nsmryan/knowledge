@@ -1,12 +1,19 @@
 # TCL
 
 ## MagicSplat
+
 MagicSplat documentation:
 https://www.magicsplat.com/tcl-docs/doctoc_tcl.html
 
 
 ## RBC
+
 RBC library documentation:
 https://www.magicsplat.com/tcl-docs/doctoc_rbc.html
 http://chiselapp.com/user/rene/repository/rbc/index
+
+## Binary File Configuration
+
+set f [open fileName]
+fconfigure $f -translation binary -encoding binary -eofchar {}
 
