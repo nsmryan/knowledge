@@ -44,6 +44,42 @@ Overlays.
 If no SECTIONS is given, the first object file will determine the order of sections, and all
 sections in all files will be grouped by name in that order starting at 0.
 
+MEMORY defines regions of memory to be used in the script. 
+Name, attributes, origin, length
+R for readonly, W for read/write, X for executable, A for allocable, I for initialized, L is same as I, ! inverts other attributes.
+  
+PHDRS: only used for elf output. Overrides the built-in program header.
+gives a name, type, fileheader, program headers, address and flags.
+FILEHEADER is used to indicate the elf file header, PHDR indicates elf program headers.
+type is:
+nul: not usedl
+load: loaded from file
+dynamic: contains dynamic linking information
+interp: program interpreter segment
+note: note information
+shlib: a reserted type
+pdhr: program header
+expressions can also be used to generate a numeric type for some reason
+The AT command can be used to specify that a program header is loaded at a specific location.
+
+VERSION command implements symbol versioning.
+
+Suffixes K and M are accepted for KB and MB.
+Double quotes can be used for symbols with spaces.
+
+Expressions are usually absolute, except in SECTIONs, but can be made ABSOLUTE with that keyword if desired.
+
+ABSOLUTE(expr) gives the absolute address of an expression
+ADDR(section) gives the address of a section
+ALIGN(expr) returns the . aligned to the given number of bytes.
+DEFINED(symbol) returns wheher a symbol is defined.
+LOADADDR(section) gives the load address of a section
+MIN/MAX
+NEXT(exp) aligns and gives next address. If addresses are non-contingous it handles skipping to the next
+valid address
+sizeof(section) gives the size of a section
+sizeof_headers gives size in bytes of output file's headers.
+
 === Assignment ===
 
 All the C assignments work in linker scripts.
