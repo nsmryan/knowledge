@@ -1,0 +1,27 @@
+
+# Current
+
+Graphical Linear Algebra
+https://graphicallinearalgebra.net/2015/12/26/27-linear-relations/
+
+Why Philosophers Should Care about Computational Complexity
+Scott Aaronson
+section 10.2
+
+Learn Vimscript the Hard Way
+
+Tools for Convivality
+https://www.nimblemachines.com/tools-for-conviviality/
+
+
+# Backup
+
+Evidence Based Software Engineering
+
+ELF and Linkers
+https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/
+https://www.gabriel.urdhr.fr/2015/01/22/elf-linking/
+
+Electronics
+https://ultimateelectronicsbook.com/#algebraic-approximations
+

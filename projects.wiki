@@ -4,8 +4,6 @@
     * [[Articles]]
     * [[Books]]
 
-## Current
-
 ### Rust Roguelike
 
 Unity side
@@ -14,6 +12,11 @@ Implementation spreadsheet
 
 UI to match mockup
 
+Implementation spreadsheet:
+https://docs.google.com/spreadsheets/d/1aH5VCo89Vbmrtdd0s_HKnHIMwlkwgM0OH7PLhI6qD_U/edit#gid=243824189
+
+Wix Blog
+https://manage.wix.com/dashboard/0464ec4b-b369-4156-bd0d-86dbb1f2b77c/home/?referralInfo=sidebar
 
 ## Blog
 
@@ -27,9 +30,4 @@ Forth library writes ups- looking at each of pforth, libforth, atlast
 for similarities, differences, implementation details and use.
 
 Ti83 forth write up
-
-wfc crate writeup
-
-rectcut crate writeup
-
 
