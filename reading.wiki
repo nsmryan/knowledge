@@ -14,6 +14,8 @@ Tools for Convivality
 https://www.nimblemachines.com/tools-for-conviviality/
 
 
+Also see: [[Books]]
+
 # Backup
 
 Evidence Based Software Engineering
