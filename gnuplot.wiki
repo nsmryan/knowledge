@@ -21,6 +21,9 @@ set terminal svg font "arial,10" fontscale 1.0 size 600, 400
 example, png:
 set terminal png font "/Library/Fonts/Times New Roman.ttf, 11" 
 
+example, pdf:
+set terminal pdf
+
 == Seperators ==
 
 set datafile seperator [ "{str:char}" | whitespace | tab | comma ]
@@ -39,6 +42,9 @@ set datafile separator comma
 Steps and fsteps make a digital diagram.
 
 polygon creates shapes
+
+example, line style:
+set style line  1 lc rgb '#0060ad' pt 5 ps 0.2 lt 1 lw 2    # blue
 
 == Time Format ==
 
@@ -68,3 +74,21 @@ set ylabel "ylabel name"
 set title "Plot Title"
 
 set output "filename"
+
+== Multiplot == 
+
+Multiple plots, one above the other:
+set multiplot layer 2,1
+
+example, 2x2 layout:
+set multiplot layout 2,2 rowsfirst
+
+== Variables ==
+
+Can set options in variables:
+
+TMARGIN = "set tmargin at screen 0.90; set bmargin at screen 0.55"
+
+@TMARGIN splices the string into the current line.
+
+
