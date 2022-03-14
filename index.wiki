@@ -12,3 +12,4 @@
     * [[Linkers and Loaders]]
     * [[Git]]
     * [[reading]]
+    * [[gnuplot]]

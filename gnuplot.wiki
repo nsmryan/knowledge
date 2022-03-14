@@ -1,0 +1,70 @@
+= GnuPlot =
+
+== Files ==
+
+example, simple:
+plot "filename" using 1:2 with lines
+
+example, with time:
+plot "data" using (timecolumn(1, "%Y-%m-%d")):2 with linepoints
+
+example, with subprocess output:
+plot "< a.out" using 1:2
+
+== Terminals ==
+
+set terminal svg size 640,400 name "plotname.svg" font linewidth X background color
+
+example, svg:
+set terminal svg font "arial,10" fontscale 1.0 size 600, 400 
+
+example, png:
+set terminal png font "/Library/Fonts/Times New Roman.ttf, 11" 
+
+== Seperators ==
+
+set datafile seperator [ "{str:char}" | whitespace | tab | comma ]
+
+example:
+both : and |
+set datafile separator ":|"
+
+comma
+set datafile separator ","
+or
+set datafile separator comma
+
+== Styles ==
+
+Steps and fsteps make a digital diagram.
+
+polygon creates shapes
+
+== Time Format ==
+
+Milliseconds are acceptable
+
+```
+print strftime("%H:%M:%.3S %d-%b-%Y",time(0.0))
+```
+
+== Color Palettes ==
+
+https://github.com/Gnuplotting/gnuplot-palettes
+
+== Ranges ==
+
+set x range:
+plot [-pi:pi] sin(x)
+
+
+set y range:
+plot [] [-0.5:0.5] sin(x)
+
+== Misc ==
+
+set xlabel "xlabel name"
+set ylabel "ylabel name"
+set title "Plot Title"
+
+set output "filename"
