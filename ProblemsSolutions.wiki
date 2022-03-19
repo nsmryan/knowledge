@@ -1,65 +1,65 @@
-# Problems and Solutions
+= Problems and Solutions =
 
-## Language Agnostic Binary Messaging:
+== Language Agnostic Binary Messaging ==
 msgpack
 
-## Simple CLI Interface
+== Simple CLI Interface ==
 linenoise
 
-## In-memory Data Storage
+== In-memory Data Storage ==
 rax
 skiparray
 iowow
 libart
 
-## Fast C Compiler
+== Fast C Compiler ==
 tcc/libtcc
 
-## Performance Testing
+== Performance Testing ==
 hyperfine/perf/b63
 
-## Directory Monitoring
+== Directory Monitoring ==
 entr
 dmon
 
-## Stretchy Buffers
+== Stretchy Buffers ==
 growable buffer/stretchy buffer
 
-## C11 Portable Threading
+== C11 Portable Threading ==
 tinycthread
 
-## Peripheries
+== Peripheries ==
 c-periphery
 
-## Configuration Files
+== Configuration Files ==
 ini
 
-## Logging
+== Logging ==
 log.c
 
-## Testing
+== Testing ==
 unity
 
-## Command Line Arguments
+== Command Line Arguments ==
 optfetch
 
-## Memory Streams
+== Memory Streams ==
 SDL2
 fmem memory streams in C
 
-## Web Server
+== Web Server ==
 swill web server
 
-## File System
+== File System ==
 fs.c/tinydir
 
-## Dynamic Library Loading
+== Dynamic Library Loading ==
 libdylib
 
-## Build Systems
+== Build Systems ==
 make
 ninja
 
-## Makefile Dependencies
+== Makefile Dependencies ==
 https://glouw.com/2018/04/14/Good-Makefiles.html
 

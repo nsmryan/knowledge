@@ -96,3 +96,10 @@ https://www.youtube.com/watch?v=Gm5EIdpVHIM&list=PLnB5NenmrhCcB_2fYKYDsMsI1r5Ox5
 7DRL Entries 2022
 https://itch.io/jam/7drl-challenge-2022/entries
 
+
+== ProtoFlight ==
+
+Need a ground system of some kind. Likely COSMOS
+
+run on windows, linux and freertos/stm32, and perhaps arduino
+

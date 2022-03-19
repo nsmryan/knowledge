@@ -127,3 +127,8 @@ This information can be used in some file formats.
 
 https://home.cs.colorado.edu/~main/cs1300/doc/gnu/ld_toc.html
 
+
+To Read
+https://refspecs.linuxfoundation.org/elf/elf.pdf
+https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/
+https://www.gabriel.urdhr.fr/2015/01/22/elf-linking/

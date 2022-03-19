@@ -4,6 +4,8 @@
     * [[Games]]
     * [[reading]]
     * [[Comics]]
+    * [[books]]
+    * [[podcasts]]
 
 == Technical ==
 
