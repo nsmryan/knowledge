@@ -1,8 +1,8 @@
 = SCPI =
 
-# Oscilloscope
+== Oscilloscope ==
  
-## Display
+=== Display ===
 
 display a channel
 :channelN:display (on|off)
@@ -21,7 +21,7 @@ amplitude display unit
 :channelN:(volt|watt|ampere|unknown)
 
 
-### Image
+=== Image ===
 get an image from the display
 this is either bmp24, bmp8, png, jpeg, or tiff
 
@@ -34,7 +34,7 @@ This can be large, so might want to read # and N,
 and then read the size, and then read bytes,
 when reading this kind of data
 
-### Waveform
+=== Waveform ===
 waveform format is byte, word or ascii.
 word is just 16 bits with all 0 in low byte
 

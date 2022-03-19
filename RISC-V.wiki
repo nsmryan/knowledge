@@ -1,10 +1,10 @@
-# RISC-V
+= RISC-V =
 
 
-## Basic instruction set manual notes
+== Basic instruction set manual notes ==
 
 
-### Harts
+=== Harts ===
 
 Harts are hardware threads. They have their own instruction fetch,
 but may be virtual or mapped to actual hardware.
@@ -13,7 +13,7 @@ processing traps, or with an implemented defined
 concept of progress.
 
 
-### Encoding
+=== Encoding ===
 
 Instructions may vary in length. There is a version of risc-v with
 fixed 32-bit instructions, along with versions for compressed instructions
@@ -40,7 +40,7 @@ Situations that are not covered by the standard are labled UNSPECIFIED, and may 
 given more information in implementation documentation.
 
 
-### Integer ISA
+=== Integer ISA ===
 
 The Integer ISA can almost emulate all other standard ISAs, with the exception
 of A as this requires hardware support.
@@ -140,7 +140,7 @@ There is a good note about how aligned loads/stores can be atomic while misalign
 in case they unpack until multiple instructions.
 
 
-### Left Off At
+=== Left Off At ===
 
 riscv-spec-20191213.pdf
 2.7 Memory Order Instructions

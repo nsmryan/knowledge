@@ -12,6 +12,7 @@
     * [[Vim]]
     * [[tcl]]
     * [[instrument control]]
+    * [[SCPI]]
     * [[RISC-V]]
     * [[Linkers and Loaders]]
     * [[Git]]
