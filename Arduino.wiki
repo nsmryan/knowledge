@@ -1,7 +1,7 @@
-# Arduino
+= Arduino =
 
 
-### Memory
+== Memory == 
 
 Memory Map:
 
@@ -10,7 +10,7 @@ Memory Map:
 96-256 extended I/O space
 256-2304 SRAM
 
-#### I/O Space
+=== I/O Space ===
 
 64 bytes of I/O space with special instructions like in/out.
 0-64
@@ -18,22 +18,22 @@ Memory Map:
 Extended I/O space must use store/load instructions like normal memory.
 96-256
 
-#### Addressing Modes
+=== Addressing Modes ===
 
 Direct
 Indirect from X/Y/Z registers, allows pre-decrement, post-increment
 Indirect With Offset from X/Y/Z registers - 63 addresses around X/Y/Z
 
-#### Boot Flash
+=== Boot Flash ===
 
 End of memory by default.
 Can contain spm instruction.
 
-#### Application Flash
+=== Application Flash ===
 
 Starts at start of flash memory space.
 
-#### EEPROM
+=== EEPROM ===
 
 1K in separate address space
 100000 writes
@@ -41,18 +41,18 @@ Starts at start of flash memory space.
 Reading halts CPU for 4 cycles
 Writing halts CPU for 2 cycles
 
-### Stack
+=== Stack ===
 
 Initialized to just past SRAM.
 Grows downwards in memory.
 
-### Interrupts
+=== Interrupts ===
 
 Status register is not saved by interrupts, this is handled by software.
 
 The PC is stored on the stack as part of interrupt handling.
 
-#### Sequence
+=== Sequence ===
 
 Once enabled, the next instruction is executed, and interrupts are checked at the end.
 When disabled, interrupts will not occur even if set during the enable instruction.
@@ -63,14 +63,14 @@ Interrupts have priority, with lowest number having highest priority. If interru
 are enabled during an ISR, higher priority interrupts will interrupt the current
 interrupt.
 
-#### Timing
+=== Timing ===
 
 4 clock cycles to enter at least. If multi cycle instruction is being executed, it is completed.
 4 cycles to exit.
 
-### Timers
+== Timers ==
 
-#### Clocking
+==== Clocking ====
 
 The timer can be clocked in multiple ways. Internal clocks can be used, and an external clock on a
 certain pin can be used. If the pin is to be read externally, it must be an input.
@@ -80,7 +80,7 @@ External clock sources can be rising and falling edge detected.
 
 There are options for clock prescalling
 
-#### 16 Bit Accesses
+==== 16 Bit Accesses ====
 
 The 16 bit timers use an internal temporary register to allow 8 bit reads to read a value in two
 accesses, or write two bytes.

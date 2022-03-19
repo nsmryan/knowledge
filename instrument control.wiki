@@ -5,7 +5,7 @@ Instrument control is standardized into:
     * SCPI
     * IVI
 
-## VISA
+== VISA ==
 
 VISA is a means of connecting to instruments and sending and receiving from
 many interfaces (GPIB/Ethernet/Serial/USB/PXI).
@@ -20,7 +20,7 @@ National Instruments and Keysight, and perhaps others.
 
 The tclvisa library provides a wrapping of VISA that is very nice.
 
-## SCPI
+== SCPI ==
 
 SCPI is a common format to describe instrument commands. The format
 is widely used, although there is no guarentee that the commands will
@@ -45,7 +45,7 @@ viWrite does not require a viRead for commands that set state.
 there is probably a status register that could be checked instead.
 
 
-## IVI
+== IVI ==
 
 The IVI specification provides an API to instruments instead of text commands.
 This requires a Shared Components installation from the IVI foundation,
