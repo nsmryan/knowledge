@@ -3,10 +3,6 @@
 
 == Current ==
 
-HPC
-https://en.algorithmica.org/hpc/data-structures/binary-search/
-nearly finished
-
 Graphical Linear Algebra
 https://graphicallinearalgebra.net/2015/12/26/27-linear-relations/
 nearly finished
