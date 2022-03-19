@@ -14,5 +14,6 @@
     * [[Linkers and Loaders]]
     * [[Git]]
     * [[Arduino]]
-    * 
     * [[ProblemsSolutions]]
+    * [[reading]]
+    * [[gnuplot]]
