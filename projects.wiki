@@ -1,33 +1,98 @@
-# Projects
+= Projects =
 
     * [[Programming]]
     * [[Articles]]
     * [[Books]]
+    * [[Games]]
+    * [[Podcasts]]
 
-### Rust Roguelike
+== Rust Roguelike ==
 
-Unity side
+ * Cleanups github issues: https://github.com/nsmryan/RustRoguelike/issues?q=is%3Aissue+is%3Aopen+label%3ACleanup
+ * Stamina
+ * Abilities
+ * Read through the story section
+ * Level win conditions
+ * High level game structure
+ * Add in-game console back in
 
-Implementation spreadsheet
 
-UI to match mockup
-
+=== References ===
 Implementation spreadsheet:
 https://docs.google.com/spreadsheets/d/1aH5VCo89Vbmrtdd0s_HKnHIMwlkwgM0OH7PLhI6qD_U/edit#gid=243824189
 
 Wix Blog
 https://manage.wix.com/dashboard/0464ec4b-b369-4156-bd0d-86dbb1f2b77c/home/?referralInfo=sidebar
 
-## Blog
+
+== Blog ==
+
+recent reading:
+arduino spec
+risc-v spec
+
+sharks:
+C, make, tcl, gnuplot, bash, tk
+communicative languages
 
 Cool things you can do with gcc article- just list these out a bit.
 maybe also cool things with c- LD_PRELOAD, instrumentation in gcc,
 valgrind for cache use, cil
 
-Series linking to ideas to get interesting ideas a small signal boost.
-
 Forth library writes ups- looking at each of pforth, libforth, atlast
 for similarities, differences, implementation details and use.
 
 Ti83 forth write up
+
+how bad things are in c, low level programming. link to posts
+on this. wishing for a better answer like a virtual machine or
+simpler basic structures.
+abi posts from phd
+c is not a language anymore
+how to make shared libraries
+
+NEO posts: betawise review
+
+embedded is easy. can see all code. read risc-v assembly
+apis for RTOSs are much better then posix/windows
+not everything is a file. most things are handles or
+sets of registers
+real time lets you reason about task context switching
+you know how much heap and stack you have. its not a
+weird mystery of oversubstription.
+
+ti forth: post about my ti forth a bit. 
+may post on https://groups.google.com/g/ticalcorg-advanced?hl=en
+
+some fsw posts: 
+message bus as queues, extends to filtering, routing, dynamic, monitoring, etc
+fdir basic designs. stack language or simple operators.
+
+post on zig drawing project with sdl2. very enjoyable. defer helps a lot
+integration with c is mostly seamless.
+
+== Low Priority ==
+
+=== Neo ===
+
+Continue review of 
+https://github.com/isotherm/betawise
+especially os3k.c. Write up the results on blog.
+
+Maybe try compiling again?
+I believe I didn't use quite the right toolchain last time.
+
+=== Ukraine Bundle ===
+https://01010111.itch.io/upsquid
+https://futureproofgames.itch.io/ossuary
+https://triple-topping.itch.io/ynglet
+https://armor-games-studios.itch.io/20000atm
+https://chucklefish.itch.io/inmost
+
+Brogue letsplay:
+https://www.youtube.com/watch?v=Gm5EIdpVHIM&list=PLnB5NenmrhCcB_2fYKYDsMsI1r5Ox59FX&ab_channel=tonehack
+
+
+7DRL Entries 2022
+https://itch.io/jam/7drl-challenge-2022/entries
 

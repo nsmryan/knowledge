@@ -1,0 +1,18 @@
+= Podcasts =
+
+== Ongoing ==
+
+Hello From the Magic Tavern
+
+Pistol Shrimps Radio
+
+== To Listen ==
+
+https://hopeinsource.com/tetris/
+
+The Cofree Coffee Cast
+
+Signals and Threads
+https://signalsandthreads.com/memory-management/
+
+Embedded.fm

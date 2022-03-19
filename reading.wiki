@@ -1,18 +1,25 @@
+= Reading =
+[[Books]]
 
-# Current
+== Current ==
+
+HPC
+https://en.algorithmica.org/hpc/data-structures/binary-search/
+nearly finished
 
 Graphical Linear Algebra
 https://graphicallinearalgebra.net/2015/12/26/27-linear-relations/
+nearly finished
 
 Learn Vimscript the Hard Way
+https://learnvimscriptthehardway.stevelosh.com/chapters/19.html
 
 Tools for Convivality
 https://www.nimblemachines.com/tools-for-conviviality/
+part way
 
 
-Also see: [[Books]]
-
-# To get back to eventually
+== Eventually ==
 
 Evidence Based Software Engineering
 
@@ -28,3 +35,4 @@ https://gabrielgambetta.com/computer-graphics-from-scratch/01-common-concepts.ht
 
 Foundations of Embedded Systems
 https://f-of-e.org/chapter-00
+

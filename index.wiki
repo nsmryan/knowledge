@@ -1,14 +1,18 @@
 = Knowledge =
+    * [[media]]
+    * [[projects]]
+    * [[Games]]
+    * [[reading]]
+    * [[Comics]]
+
+== Technical ==
+
     * [[Vim]]
     * [[tcl]]
     * [[instrument control]]
-    * [[media]]
-    * [[projects]]
-    * [[ProblemsSolutions]]
-    * [[Comics]]
-    * [[Games]]
-    * [[Arduino]]
     * [[RISC-V]]
     * [[Linkers and Loaders]]
     * [[Git]]
-    * [[reading]]
+    * [[Arduino]]
+    * 
+    * [[ProblemsSolutions]]
