@@ -1,0 +1,63 @@
+# Linux
+
+## Manjaro
+
+### Installation
+
+After install, sound didn't work. Vim not installed, and pacman installation was missing 
+glibc.
+
+Required a
+> pacman -Syyu
+to update.
+
+
+Cloned, built and installed dwm.
+Added a file to get dwm as an option on login:
+```bash
+> cat /usr/share/xsessions/DWM.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Name=DWM
+Comment=Dynamic Window Manager
+Exec=/usr/local/bin/dwm
+Icon=
+Type=Application
+```
+
+Also built and installed st.
+
+
+dwmstatus:
+git clone git://git.suckless.org/dwmstatus
+cd dwmstatus
+make
+make PREFIX=/usr install
+# add »dwmstatus 2>&1 >/dev/null &« to your .xinitrc
+
+xorg change for touchpad from stackoverflow
+
+### Scroll Speed
+
+Get device list
+```
+xinput list
+```
+
+List properties
+```
+xinput list-props ID
+```
+
+Set property:
+```
+xinput --set-prop ID SETTINGID VALUE
+```
+where the setting id is in parens next to the name.
+
+
+### Sound
+
+alsamixer
+
+[[Use]] F3 to select 'All' and increase to get sound working.
