@@ -1,0 +1,10 @@
+= SDL2 =
+
+
+== Input ==
+
+SDL_GetModState gives currently held modifier keys.
+
+In rust, use the Sdl2 context to get a "KeyboardUtils" with the 'keyboard' function,
+and use "mod_state" to get a Mod, which can be checked for individual keys.
+
