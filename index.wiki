@@ -9,7 +9,7 @@
 
 == Technical ==
 
-    * [[Vim]]
+    * [[vim]]
     * [[tcl]]
     * [[instrument control]]
     * [[SCPI]]
@@ -21,3 +21,4 @@
     * [[reading]]
     * [[gnuplot]]
     * [[linux]]
+    * [[sdl2]]

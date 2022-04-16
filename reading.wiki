@@ -8,7 +8,7 @@ https://graphicallinearalgebra.net/2015/12/26/27-linear-relations/
 nearly finished
 
 Learn Vimscript the Hard Way
-https://learnvimscriptthehardway.stevelosh.com/chapters/19.html
+https://learnvimscriptthehardway.stevelosh.com/chapters/28.html
 
 Tools for Convivality
 https://www.nimblemachines.com/tools-for-conviviality/

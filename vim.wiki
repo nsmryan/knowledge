@@ -1,0 +1,70 @@
+= Vim =
+
+== Vim Script ==
+
+
+=== Variable Arguments ===
+
+Example
+```vimscript
+function Varg(name, ...)
+    echom a:name
+    echom a:0
+    echom a:1
+    echo a:000
+endfunction
+```
+echom cannot print lists, so we use echo.
+
+
+The a:name is a normal argument.
+The a:0 is the number of variable arguments given.
+The a:1 is the first argument.
+The a:000 is the list of arguments.
+The a:000[0] is the first argument of the vargs list.
+
+
+Arguments cannot be modified. However, lists and dicts can have their 
+contents modified. Use 'lockvar' to prevent modification of this type.
+
+=== Echo Highlights ===
+
+To highlight echos with a highlight group:
+```vimscript
+echohl HIGHLIGHT_GROUP
+echo "message"
+echohl None
+```
+
+See ":help highlight-groups" for available groups. WarningMsg for example.
+
+=== Coercion ===
+
+Vim will coerce strings to integers, never to floats.
+Strings that start with a number will be converted to that
+number. Strings that start with a character will be 0.
+
+=== Strings ===
+
+Normal " requires espacing special sequences.
+
+
+Single quote ' is a literal, but to get a ' within a ', use ''.
+
+=== Methods ===
+
+Many functions can be called on objects as methods:
+```vimscript
+echo "foo bar"->split()
+```
+
+== Help ==
+
+To get the function version of a name, not the command, use
+```vimscript
+help split()
+```
+to get the command use:
+```vimscript
+help :split
+```
