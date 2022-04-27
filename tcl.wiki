@@ -12,21 +12,42 @@ RBC library documentation:
 https://www.magicsplat.com/tcl-docs/doctoc_rbc.html
 http://chiselapp.com/user/rene/repository/rbc/index
 
+
+=== StripCharts ===
+
+"-autorange" is the total seconds worth of data to show at once.
+
+"-shiftby" is the seconds to shift on fill. This is how many seconds are
+in front of the data once the plot fills and the data is shifted to the left.
+    
+
 == Binary File Configuration ==
 
 set f [open fileName]
 fconfigure $f -translation binary -encoding binary -eofchar {}
 
 == Bash Script that is Also a TCL Script ==
+
 Start the file with:
+
 ```bash
 #!/bin/sh
 # The next line is executed by /bin/sh, but not tcl \
 exec wish "$0" -- $*
 ```
+
 followed by TCL code. This executes the script as a bash script, but this
 script immediately invokes TCL (wish in this case). The trick seems to be
 the '\' character, which bash must not use to merge lines, but TCL does.
 
 This allows an executable bash script to open a GUI, for example. The concept
 comes from cobra's 'window.tcl' file.
+
+== Snippets ==
+
+Search through a list and return matching items:
+
+```tcl
+lsearch -glob -all -inline $values $glob
+```
+
