@@ -14,11 +14,13 @@ http://chiselapp.com/user/rene/repository/rbc/index
 
 
 Enable zooming:
-```tcl
+
+```
 Rbc_ZoomStack .plot
 ```
 
 Some colors to use for plotting:
+
 ```
 set COLORS { forestgreen orange cornflowerblue magenta darkolivegreen4 indianred1 tan4 red2 darkblue mediumorchid1 irebrick4 yellowgreen lightsalmon tan3 tan1 darkgray wheat4 #DDAD4B chartreuse seagreen1 moccasin mediumvioletred seagreen cadetblue1 darkolivegreen1 tan2 tomato3  #7CE3D8 gainsboro }
 ```
@@ -26,18 +28,20 @@ set COLORS { forestgreen orange cornflowerblue magenta darkolivegreen4 indianred
 === Plot Markers ===
 
 Set step size of major ticks:
-```tcl
+
+```
 .plot axis configure x -stepsize 1.0
 ```
 
 Set step size and set min and max range for y axis:
-```tcl
 
+```
 .plot axis configure y -stepsize 16 -min 0 -max 256
 ```
 
 Set subdivisions for minor ticks on x axis:
-```tcl
+
+```
 .plot axis configure x -subdivisions 15
 ```
     
@@ -58,7 +62,7 @@ fconfigure $f -translation binary -encoding binary -eofchar {}
 
 Start the file with:
 
-```bash
+```
 #!/bin/sh
 # The next line is executed by /bin/sh, but not tcl \
 exec wish "$0" -- $*
@@ -75,22 +79,25 @@ comes from cobra's 'window.tcl' file.
 
 Search through a list and return matching items:
 
-```tcl
+```
 lsearch -glob -all -inline $values $glob
 ```
 
 Export an ensemble with a specific name, even if it is within a nested namespace:
-```tcl
+
+```
 namespace ensemble create -command ::NAME
 ```
 
 Include a namespace, but only use its definitions if a name is not in the current namespace.
 In other words, fall back to the given namespace but do not include its names in the current one.
-```tcl
+
+```
 namespace path NAMESPACE
 ```
 
 Kill whole application when a window is closed:
-```tcl
+
+```
 bind .window <Destroy> [list destroy .]
 ```
