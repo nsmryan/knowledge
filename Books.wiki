@@ -2,8 +2,6 @@
 
 == Reading Now ==
 
-The Now Habit
-
 Walden
 
 A Picture of Dorian Gray
@@ -11,6 +9,8 @@ A Picture of Dorian Gray
 The Witcher series
 
 The Black Tower series
+
+The Now Habit
 
 Tools for Conviviality - Ivan Illich
 https://www.nimblemachines.com/tools-for-conviviality/#conrec
