@@ -13,6 +13,16 @@ https://www.magicsplat.com/tcl-docs/doctoc_rbc.html
 http://chiselapp.com/user/rene/repository/rbc/index
 
 
+Enable zooming:
+```tcl
+Rbc_ZoomStack .plot
+```
+
+Some colors to use for plotting:
+```
+set COLORS { forestgreen orange cornflowerblue magenta darkolivegreen4 indianred1 tan4 red2 darkblue mediumorchid1 irebrick4 yellowgreen lightsalmon tan3 tan1 darkgray wheat4 #DDAD4B chartreuse seagreen1 moccasin mediumvioletred seagreen cadetblue1 darkolivegreen1 tan2 tomato3  #7CE3D8 gainsboro }
+```
+
 === Plot Markers ===
 
 Set step size of major ticks:
@@ -78,4 +88,9 @@ Include a namespace, but only use its definitions if a name is not in the curren
 In other words, fall back to the given namespace but do not include its names in the current one.
 ```tcl
 namespace path NAMESPACE
+```
+
+Kill whole application when a window is closed:
+```tcl
+bind .window <Destroy> [list destroy .]
 ```
