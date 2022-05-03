@@ -15,6 +15,11 @@ git submodule update --init -recursive
 Removing submodules:
 https://gist.github.com/myusuf3/7f645819ded92bda6677
 
+
+Note that you have to use "--init" for recursive submodules- if even
+top level submodules are already cloned, you need it to even attempt to
+clone recursive submodules.
+
 == Authentication ==
 
 On Windows, you may need
@@ -44,6 +49,9 @@ Add the key to your github account, and use the configuration:
 
 ```
 git config --global core.sshCommand 'ssh -i ~/.ssh/id_ed25519'
+
+# or
+git config --global core.sshCommand 'ssh -i ~/.ssh/id_ed25519' -o IdentitiesOnly=yes'
 ```
 or do this for each repository locally.
 
