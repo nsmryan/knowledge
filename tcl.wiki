@@ -75,6 +75,21 @@ the '\' character, which bash must not use to merge lines, but TCL does.
 This allows an executable bash script to open a GUI, for example. The concept
 comes from cobra's 'window.tcl' file.
 
+
+=== Thingy ==
+
+    
+From https://wiki.tcl-lang.org/page/Thingy%3A+a+one%2Dliner+OO+system
+
+```
+    proc thingy name { proc $name args "namespace eval $name \$args" }
+```
+
+```
+$name proc forward args { variable widget; $widget {*}$args  }
+namespace eval $name "namespace unknown ${name}::forward"
+```
+
 == Snippets ==
 
 Search through a list and return matching items:
@@ -101,3 +116,16 @@ Kill whole application when a window is closed:
 ```
 bind .window <Destroy> [list destroy .]
 ```
+
+Lots of colors:
+
+```
+{ forestgreen orange cornflowerblue magenta darkolivegreen4 indianred1 tan4 red2 darkblue mediumorchid1 yellowgreen lightsalmon tan3 tan1 darkgray wheat4 #DDAD4B chartreuse seagreen1 moccasin mediumvioletred seagreen cadetblue1 darkolivegreen1 tan2 tomato3  #7CE3D8 gainsboro }
+```
+
+Create a font:
+
+```
+    font create legendFont -family Helvetica -size 8 -weight bold 
+```
+
