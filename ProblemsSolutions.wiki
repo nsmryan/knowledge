@@ -63,3 +63,7 @@ ninja
 == Makefile Dependencies ==
 https://glouw.com/2018/04/14/Good-Makefiles.html
 
+== Geometric Data Structures ==
+
+rtree
+https://github.com/tidwall/rtree.c
