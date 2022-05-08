@@ -4,13 +4,16 @@
 msgpack
 
 == Simple CLI Interface ==
+readline
 linenoise
+bestnoise
 
 == In-memory Data Storage ==
 rax
 skiparray
 iowow
 libart
+sqlite
 
 == Fast C Compiler ==
 tcc/libtcc
@@ -42,6 +45,7 @@ unity
 
 == Command Line Arguments ==
 optfetch
+commander
 
 == Memory Streams ==
 SDL2
@@ -64,6 +68,5 @@ ninja
 https://glouw.com/2018/04/14/Good-Makefiles.html
 
 == Geometric Data Structures ==
-
 rtree
 https://github.com/tidwall/rtree.c

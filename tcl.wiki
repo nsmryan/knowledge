@@ -22,7 +22,7 @@ Rbc_ZoomStack .plot
 Some colors to use for plotting:
 
 ```
-set COLORS { forestgreen orange cornflowerblue magenta darkolivegreen4 indianred1 tan4 red2 darkblue mediumorchid1 irebrick4 yellowgreen lightsalmon tan3 tan1 darkgray wheat4 #DDAD4B chartreuse seagreen1 moccasin mediumvioletred seagreen cadetblue1 darkolivegreen1 tan2 tomato3  #7CE3D8 gainsboro }
+set COLORS { forestgreen orange cornflowerblue magenta darkolivegreen4 indianred1 tan4 red2 darkblue mediumorchid1 yellowgreen lightsalmon tan3 tan1 darkgray wheat4 #DDAD4B chartreuse seagreen1 moccasin mediumvioletred seagreen cadetblue1 darkolivegreen1 tan2 tomato3  #7CE3D8 gainsboro }
 ```
 
 === Plot Markers ===
