@@ -3,9 +3,9 @@
 
 == Current ==
 
-Graphical Linear Algebra
-https://graphicallinearalgebra.net/2015/12/26/27-linear-relations/
-nearly finished
+The Scientist and Engineer's Guide to
+Digital Signal Processing
+http://www.dspguide.com/ch3/5.htm
 
 Learn Vimscript the Hard Way
 https://learnvimscriptthehardway.stevelosh.com/chapters/28.html
@@ -14,10 +14,17 @@ Tools for Convivality
 https://www.nimblemachines.com/tools-for-conviviality/
 part way
 
+Graphical Linear Algebra
+https://graphicallinearalgebra.net/2015/12/26/27-linear-relations/
+nearly finished
+
 
 == Eventually ==
 
 Evidence Based Software Engineering
+
+Linux Insides:
+https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html
 
 ELF and Linkers
 https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/
