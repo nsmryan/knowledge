@@ -1,0 +1,14 @@
+= STM32 =
+
+== Tools ==
+
+stlink: available from package manager or https://github.com/stlink-org/stlink/.
+
+Installs st-info, st-flash, st-trace, st-util, and a GUI stlink-gui
+
+
+== Zig ==
+
+Example project
+https://github.com/rbino/zig-stm32-blink
+
