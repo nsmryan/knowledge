@@ -1,0 +1,74 @@
+= ELF =
+
+From System V ABI Document:
+http://www.sco.com/developers/devspecs/gabi41.pdf
+
+
+Sections are for linking
+Segments are for loading. Seg for seg-fault.
+
+
+
+Section header indices can be used for special meanings:
+
+symbols relative to SHN_UNDEF (0) are invalid.
+symbols relative to SHN_ABS (0xfff1) are absolute - not effected by relocation.
+symbols relative to SHN_COMMON (0xfff1) are common symbols such as unallocated c external variables.
+
+Sections contain all information in the file except the elf header, program header table, and section header table.
+
+
+Section headers have a name as an offset into the section header string table.
+Sections have address in final address space, offset in elf file, and size.
+entsize gives the size of entries in the section if it holds a table of fixed size entries.
+flags indicates writable during execution, alloc if uses space during execution, execinstr if executable, and a mask for processor specific info.
+
+
+link and info:
+If type is:
+Dynamic then link is the section header index of the string table for entries in this section.
+Hash then link is the section header index of the symbol table to which the hash table applies.
+REL and RELA (relocation stuff) the link is the index of the associated symbol table, and info is the
+  index of the section that the relocations apply to.
+SYMTAB and DYNSYM the link is the index of the string table, and the info is one greater then the index of
+  the last local symbol.
+
+
+Section .got holds global offset table.
+.line is line number information.
+.plt is procedure linkage table.
+
+
+Symbol Tables:
+name is an index into the string table.
+value may be an address, an absolute value, etc.
+size can be non-zero to indicate size of symbol data.
+shndx is the index in the section header of the section that the symbol applies to.
+  this is where COMMON and ABS come in- those are special section header indices used
+  to indicate special meanings for some symbols.
+  
+st_info breaks down into:
+top 4 bits bind
+   local (0), global (1), weak (2), loproc (13), highproc (15).
+   local may appear in multiple files.
+   global are unique in one file within a linking group. other files can have undefined reference to the
+     one file's global symbol.
+   weak are like global but can be overwrittten by other objects symbols
+   COMMON are unallocated extern, which will be overwritten by globals. COMMON symbols will eventually be allocated
+     locations, perhaps when turning into an executable?
+   SHN_UNDEF indicates an undefined symbol which must be defined in another object when linking.
+   
+    
+lower is type:
+  notype, object, function, section, file
+ 
+object is a variable, array, etc.
+func is a function or executable code.
+section is a section index.
+file can indicate a source file. it can proceed local symbols to indicate where they come from.
+
+
+the procedure linkage table contains information about functions referenced but not defined in an object file.
+
+
+
