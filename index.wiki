@@ -6,6 +6,9 @@
     * [[Comics]]
     * [[books]]
     * [[podcasts]]
+    * [[concrete]]
+    * [[computer art]]
+    * [[cooking]]
 
 == Technical ==
 
